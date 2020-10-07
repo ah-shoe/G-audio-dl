@@ -18,5 +18,6 @@ except sr.UnknownValueError:
     print("Could not understand audio")
 except sr.RequestError as e:
     print("Could not request results from Speech Recognition service; {0}".format(e))
-    
-print(text)
+
+with open(f+'_text_.txt','w') as of:   #To process multiple files
+		of.write(text)
